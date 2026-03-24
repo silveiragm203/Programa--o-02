@@ -14,6 +14,7 @@
 
 ## Métodos em Python
 1. print() -> Exibe informações no terminal.
+2. input () -> captura informações do terminal.
 
 ## Format em Python
 
