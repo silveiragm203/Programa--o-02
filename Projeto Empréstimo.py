@@ -1,4 +1,4 @@
-Idade_Usuário = int(input("18"))
+Idade_Usuário = input("18")
 salário_Usuário = float(input("2000"))
 Tempo= int(input("2"))
 
