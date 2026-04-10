@@ -23,8 +23,14 @@
  ``elif (senão se)`` -> é usado para testar várias condições.Ele só executa se todas as condições anteriores forem falsas.
  ``else (senão)`` -> Executa o código se a condição for false (false).
 
+## Conversão de tipos em python
+ 1. int() -> A gente vai incluir qual variável/dado que querremos converter para número inteiro.
+ 2. float() -> A gente vai incluir qual variável/dado que querremos converter para número decimal.
+ 3. str() ->  A gente vai incluir qual variável/dado que querremos converter para texto.
+
+
   ## Boas Práticas
   1. Qualquer variável em python utiliza o padrão de case , snake_case ou recentemente o cammelCase.
-  2 .Se você observar alguma estrutura tipo nome (), 90% de chance de ser uma função.
+  2. Se você observar alguma estrutura tipo nome (), 90% de chance de ser uma função.
   3. Python não tem constante , porém utilizamos o padrão case , UPPERCASE , para simular que aquela variável não pode ser alterada.
  
