@@ -1,7 +1,6 @@
 idade = int(input("Digite Idade."))
-Tipo_Cadastro = float(input("Possui cadastro.")) #[Funcionario],[ViP][cadastrado],[sem cadastro]
-tipo_veiculo = int(input("Tipo de veiculo.[Carro],[Moto],[Caminhão]"))
-carga = int(input("Informe o tipo de carga"))
+Tipo_Cadastro = input("Possui cadastro.") #[Funcionario],[ViP][cadastrado],[sem cadastro]
+tipo_veiculo = input("Tipo de veiculo.[Carro],[Moto],[Caminhão]")
 
 
 #Criar 3 regras de negocio
@@ -19,27 +18,28 @@ if idade < 18:
     print("Entrada negada Menor de idade")
 elif idade >= 18 and Tipo_Cadastro == True and tipo_veiculo ==["Carro"] or ["Moto"]:
     print("Entrada liberada! Bem-vindo ao estacionamento.")
-elif tipo_veiculo== "caminhao":
-     entrega = input("O caminhão está fazendo entrega para as docas? (sim/nao): ")
 
-if entrega == "sim":
-      print("Entrada liberada para docas.")
-else:
-    print("Entrada negada! Caminhões só podem entrar para entregas.")
+elif tipo_veiculo == "caminhao":
+    entrega = input("O caminhão está fazendo entrega? (sim/nao): ").lower()
 
-def verificar_prioridade():
-    tipo = input("Digite o tipo (funcionario, vip, cadastrado, nenhum): ").lower()
+    if entrega == "sim":
+        print("Entrada liberada para docas.")
+    else:
+        print("Entrada negada! Caminhões só entram para entrega.")
 
-    if tipo == "funcionario":
+def prioridade():
+    Tipo_Cadastro = input("funcionario, vip, cadastrado, nenhum): ").lower()   
+
+    if Tipo_Cadastro == "funcionario":
         print("Prioridade MÁXIMA - Acesso liberado imediatamente.")
 
-    elif tipo == "vip":
+    elif Tipo_Cadastro == "vip":
         print("Alta prioridade - Acesso preferencial.")
 
-    elif tipo == "cadastrado":
+    elif Tipo_Cadastro == "cadastrado":
         print("Prioridade normal - Acesso permitido.")
 
-    elif tipo == "nenhum":
+    elif Tipo_Cadastro == "nenhum":
         print("Baixa prioridade - Necessário realizar cadastro.")
 
     else:
@@ -48,9 +48,9 @@ def verificar_prioridade():
 def entrada_veiculo():
     global vagas_total, vagas_prioritarias, vagas_pcd, vagas_comuns
 
-    tipo = input("Tipo de usuário (funcionario, vip, pcd, comum): ").lower()
+    Tipo_Cadastro = input("Tipo de usuário (funcionario, vip, pcd, comum): ").lower()
 
-    if tipo == "funcionario" or tipo == "vip":
+    if Tipo_Cadastro == "funcionario" or Tipo_Cadastro == "vip":
         if vagas_prioritarias > 0:
             vagas_prioritarias -= 1
             vagas_total -= 1
@@ -58,7 +58,7 @@ def entrada_veiculo():
         else:
             print("Sem vagas prioritárias disponíveis.")
 
-    elif tipo == "pcd":
+    elif Tipo_Cadastro == "pcd":
         if vagas_pcd > 0:
             vagas_pcd -= 1
             vagas_total -= 1
@@ -66,7 +66,7 @@ def entrada_veiculo():
         else:
             print("Sem vagas PCD disponíveis.")
 
-    elif tipo == "comum":
+    elif Tipo_Cadastro == "comum":
         if vagas_comuns > 0:
             vagas_comuns -= 1
             vagas_total -= 1
