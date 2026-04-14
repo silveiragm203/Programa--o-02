@@ -18,10 +18,33 @@
 
 ## Format em Python
 
-#  Estrutura de repetição
+#  Estrutura de Condicional
  ``if (se)`` -> Verifica se uma condição é true (verdadeira). Se for, ele executa o código.
  ``elif (senão se)`` -> é usado para testar várias condições.Ele só executa se todas as condições anteriores forem falsas.
  ``else (senão)`` -> Executa o código se a condição for false (false).
+
+# Laços de repetição
+É um recurso de programação que permite executar um conjunto de comando várias vezes. Também são chamados de Loop, Laços de repetição ou interação.
+`FOR` -> Utilizamos quando sabemos quantas vezes queremos repetir algo.
+Sintax:
+for (variavel) in range(inicio,fim):
+    comandos
+[Range()] -> Método que aceita geração de números.
+[inicio] -> É inclusivo. é o primeiro número a ser utilizado.
+[fim] -> É exclusivo. O número
+## Escopo das Variáveis
+`Escopo Local` -> A variável ela só é acessada dentro da estrutura que ela foi criada.
+`Escopo Global` -> A variável pode ser acessada por todo mundo.
+
+## Variações das variáveis 
+Variável em memória -> É declarada quando você não pretende utilizar essa variável em outros cenários.
+Váriavel Contadora -> É utilizada para uma lógica onde a repetição irá ser alterada.
+
+`WHILE` -> É utilizado quando não sabemos quantas vezes o programa vai repetir. Ele enquanto uma condição for verdadeira.
+Sintaxe:
+while condição:
+    comandos
+
 
 ## Conversão de tipos em python
  1. int() -> A gente vai incluir qual variável/dado que querremos converter para número inteiro.
