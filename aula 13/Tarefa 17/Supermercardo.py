@@ -1,19 +1,14 @@
 # Sistema de Caixa de Supermercado
-
 total_compra = 0
 quantidade_produtos = 0
 
 while True:
     valor = float(input("Digite o valor do produto (0 para finalizar): R$ "))
-
-    # condição de parada
     if valor == 0:
         break
 
-    # acumulador
     total_compra += valor
 
-    # contador
     quantidade_produtos += 1
 
 # cálculo da média
