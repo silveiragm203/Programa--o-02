@@ -1,14 +1,39 @@
-Produto = input("nome do produto")
-quantidade = float(input("Unidades."))
-Valor_Produto = float(input("Valor em R$"))
-Total = int == Produto * quantidade 
+# Sistema de Caixa de Supermercado
 
+total_compra = 0
+quantidade_produtos = 0
 
-for Valor_Produto in range(1,15):
-    print(f'{Valor_Produto} x {quantidade} = {Total}')
+while True:
+    valor = float(input("Digite o valor do produto (0 para finalizar): R$ "))
 
+    # condição de parada
+    if valor == 0:
+        break
 
-if Total > 100:
-    print("Légivel para desconto de 10%")
-elif Total <= 100:
-    print("pagamento normal")
+    # acumulador
+    total_compra += valor
+
+    # contador
+    quantidade_produtos += 1
+
+# cálculo da média
+if quantidade_produtos > 0:
+    media = total_compra / quantidade_produtos
+else:
+    media = 0
+
+# desconto
+if total_compra > 100:
+    desconto = total_compra * 0.10
+    total_final = total_compra - desconto
+else:
+    desconto = 0
+    total_final = total_compra
+
+# saída
+print("\n--- RESUMO DA COMPRA ---")
+print(f"Quantidade de produtos: {quantidade_produtos}")
+print(f"Total sem desconto: R$ {total_compra:.2f}")
+print(f"Desconto aplicado: R$ {desconto:.2f}")
+print(f"Total final: R$ {total_final:.2f}")
+print(f"Média dos valores: R$ {media:.2f}")
